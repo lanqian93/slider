@@ -5,7 +5,7 @@ from slider import retry
 
 
 def get_ip():
-    conn = pymysql.connect(host="192.168.0.108", user="root", password="cdyn00", database="ippool", charset="utf8")
+    conn = pymysql.connect(host="127.0.0.1", user="root", password="root", database="ippool", charset="utf8")
     cursor = conn.cursor()
     # 定义要执行的SQL语句
     sql = "select ip, port from ippool"
