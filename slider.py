@@ -170,7 +170,7 @@ def move_slider(account, pwd):
             "source": """Object.defineProperty(navigator, 'webdriver', {get: () => undefined})""",
         })
         driver.get(
-            "https://account.m.autohome.com.cn/login?isphone=1&backurl=https%3A%2F%2Fyou.m.autohome.com.cn%2Ffe%2Fm%2Fpersonal%2Fhome")
+            "https://127.0.0.1")
         # # driver.maximize_window()
         WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.ID, "btnLogin")))
         driver.find_element_by_css_selector("#txtUserName").send_keys(account)
@@ -197,7 +197,6 @@ def retry(account, pwd):
 
 
 if __name__ == '__main__':
-    my_ip = vali_ip()
-    os.system('代理.bat {}'.format(my_ip))
+    mover_slider("111", "111")
 
           
